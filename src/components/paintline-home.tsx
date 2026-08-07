@@ -525,7 +525,7 @@ function Contact() {
   );
 }
 
-export function PaintlineHome() {
+export function PaintLineHome() {
   return (
     <div className="min-h-dvh bg-bg text-ink">
       <SiteHeader />
