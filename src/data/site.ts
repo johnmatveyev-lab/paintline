@@ -1,3 +1,6 @@
+/** Project photography — local public assets (also mirrored on GitHub for deploys). */
+const img = (name: string) => `/images/paintline/${name}`;
+
 export const brand = {
   name: "PaintLine Pro",
   shortName: "PaintLine",
@@ -59,7 +62,7 @@ export const projects = [
     category: "Interior",
     location: "Myers Park",
     year: "2025",
-    image: "/images/paintline/hero-living.jpg",
+    image: img("hero-living.jpg"),
     span: "wide" as const,
     blurb: "Soft architectural whites and charcoal seating zones for a light-forward open plan.",
   },
@@ -69,7 +72,7 @@ export const projects = [
     category: "Exterior",
     location: "SouthPark",
     year: "2025",
-    image: "/images/paintline/project-exterior.jpg",
+    image: img("project-exterior.jpg"),
     span: "half" as const,
     blurb: "Warm stucco body with charcoal architectural trim — laser-straight porch lines.",
   },
@@ -79,7 +82,7 @@ export const projects = [
     category: "Cabinetry",
     location: "Dilworth",
     year: "2024",
-    image: "/images/paintline/project-kitchen.jpg",
+    image: img("project-kitchen.jpg"),
     span: "half" as const,
     blurb: "Factory-level cabinet refinish in muted sage with brass hardware dialogue.",
   },
@@ -89,7 +92,7 @@ export const projects = [
     category: "Commercial",
     location: "Uptown",
     year: "2025",
-    image: "/images/paintline/project-commercial.jpg",
+    image: img("project-commercial.jpg"),
     span: "half" as const,
     blurb: "Gallery-white walls and warm wood reception — hospitality-grade finish.",
   },
@@ -99,7 +102,7 @@ export const projects = [
     category: "Interior",
     location: "Ballantyne",
     year: "2024",
-    image: "/images/paintline/project-bedroom.jpg",
+    image: img("project-bedroom.jpg"),
     span: "half" as const,
     blurb: "Limewash-adjacent greige for a calm, sun-softened retreat.",
   },
