@@ -4,20 +4,20 @@ const img = (name: string) => `/images/paintline/${name}`;
 export const brand = {
   name: "PaintLine Pro",
   shortName: "PaintLine",
-  tagline: "Precision finishes for spaces that deserve better.",
-  phone: "(704) 555-0148",
-  phoneHref: "tel:+17045550148",
+  tagline: "Precision finishes for homes and businesses that deserve better.",
+  phone: "(864) 555-0148",
+  phoneHref: "tel:+18645550148",
   email: "hello@paintline.pro",
   emailHref: "mailto:hello@paintline.pro",
-  location: "Charlotte, North Carolina",
-  serviceArea: "Charlotte metro & surrounding communities",
+  location: "Greenville, South Carolina",
+  serviceArea: "Greenville, Spartanburg & the Upstate",
 };
 
 export const navLinks = [
   { href: "#work", label: "Work" },
   { href: "#services", label: "Services" },
   { href: "#process", label: "Process" },
-  { href: "#about", label: "Studio" },
+  { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
@@ -60,7 +60,7 @@ export const projects = [
     id: "ashton-residence",
     title: "Ashton Residence",
     category: "Interior",
-    location: "Myers Park",
+    location: "North Main",
     year: "2025",
     image: img("hero-living.jpg"),
     span: "wide" as const,
@@ -70,7 +70,7 @@ export const projects = [
     id: "gardenia-exterior",
     title: "Gardenia Estate",
     category: "Exterior",
-    location: "SouthPark",
+    location: "Augusta Road",
     year: "2025",
     image: img("project-exterior.jpg"),
     span: "half" as const,
@@ -78,9 +78,9 @@ export const projects = [
   },
   {
     id: "sage-kitchen",
-    title: "Sage Cabinet Studio",
+    title: "Sage Cabinet Refresh",
     category: "Cabinetry",
-    location: "Dilworth",
+    location: "Parkins Mill",
     year: "2024",
     image: img("project-kitchen.jpg"),
     span: "half" as const,
@@ -90,7 +90,7 @@ export const projects = [
     id: "commerce-lobby",
     title: "Commerce Lobby",
     category: "Commercial",
-    location: "Uptown",
+    location: "Downtown Greenville",
     year: "2025",
     image: img("project-commercial.jpg"),
     span: "half" as const,
@@ -100,7 +100,7 @@ export const projects = [
     id: "linen-suite",
     title: "Linen Primary Suite",
     category: "Interior",
-    location: "Ballantyne",
+    location: "Verdae",
     year: "2024",
     image: img("project-bedroom.jpg"),
     span: "half" as const,
@@ -136,18 +136,18 @@ export const testimonials = [
     quote:
       "They treat painting like architecture. Every edge, every sheen transition — intentional. Our home finally looks like the renderings.",
     name: "Elena R.",
-    role: "Homeowner, Myers Park",
+    role: "Homeowner, North Main",
   },
   {
     quote:
-      "Night work on our lobby without a single client complaint. The finish photographs like a design studio portfolio.",
+      "Night work on our lobby without a single client complaint. The finish photographs like a high-end portfolio piece.",
     name: "Marcus T.",
-    role: "Property Manager, Uptown",
+    role: "Property Manager, Downtown",
   },
   {
     quote:
       "Color consultation alone was worth the call. They understood our light better than we did.",
     name: "Priya & James K.",
-    role: "Homeowners, Dilworth",
+    role: "Homeowners, Augusta Road",
   },
 ] as const;

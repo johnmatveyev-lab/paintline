@@ -48,14 +48,14 @@ function Hero() {
       <div className="container-wide section-pad pb-10 md:pb-14">
         <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
-            <p className="eyebrow">Charlotte · Premium painting studio</p>
+            <p className="eyebrow">Greenville, SC · Premium painting company</p>
             <h1 className="display-xl mt-5 text-balance text-ink">
               The finish line
               <span className="block text-accent">done right.</span>
             </h1>
             <p className="lead mt-6 max-w-xl">
               {brand.tagline} From color strategy to the last cut-in, PaintLine Pro delivers
-              architectural-grade painting for homes and spaces that set the standard.
+              architectural-grade painting for homes and businesses across the Upstate.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
@@ -113,7 +113,7 @@ function Hero() {
                   Soft whites. Architectural calm.
                 </p>
               </div>
-              <p className="text-sm text-bg/70">Myers Park · Interior system</p>
+              <p className="text-sm text-bg/70">North Main · Interior system</p>
             </div>
           </div>
         </div>
@@ -317,10 +317,10 @@ function About() {
           </Reveal>
 
           <Reveal delay={80}>
-            <p className="eyebrow">The studio</p>
+            <p className="eyebrow">The company</p>
             <h2 className="display-lg mt-3 text-ink">Craftspeople, not just painters</h2>
             <p className="lead mt-4">
-              PaintLine Pro is a Charlotte-based finishing studio. We hire for eye and discipline,
+              PaintLine Pro is a Greenville-based painting company. We hire for eye and discipline,
               train to a single house standard, and treat every project like it will be photographed
               under harsh light — because good work should hold up to it.
             </p>
@@ -351,21 +351,21 @@ function Testimonials() {
     <section className="border-t border-border bg-ink py-20 text-bg md:py-28">
       <div className="container-wide section-pad">
         <Reveal>
-          <p className="eyebrow text-bg/45">Client notes</p>
-          <h2 className="display-lg mt-3 text-bg">What people say after the drop cloths leave</h2>
+          <p className="eyebrow text-bg/45">Client voices</p>
+          <h2 className="display-lg mt-3 text-bg">What neighbors say after the drop cloths leave</h2>
         </Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 70}>
-              <figure className="flex h-full flex-col rounded-[1.25rem] border border-bg/10 bg-bg/5 p-6 md:p-7">
-                <blockquote className="flex-1 font-display text-xl leading-snug tracking-tight text-bg/95 md:text-[1.35rem]">
+              <blockquote className="flex h-full flex-col rounded-[1.25rem] border border-bg/10 bg-bg/5 p-6 md:p-7">
+                <p className="flex-1 font-display text-xl leading-snug tracking-tight text-bg">
                   “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-6 border-t border-bg/10 pt-4">
+                </p>
+                <footer className="mt-6 border-t border-bg/10 pt-4">
                   <p className="text-sm font-medium text-bg">{t.name}</p>
-                  <p className="text-xs text-bg/50">{t.role}</p>
-                </figcaption>
-              </figure>
+                  <p className="mt-0.5 text-sm text-bg/55">{t.role}</p>
+                </footer>
+              </blockquote>
             </Reveal>
           ))}
         </div>
@@ -375,62 +375,66 @@ function Testimonials() {
 }
 
 function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [sent, setSent] = useState(false);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSent(true);
   }
 
   return (
     <section id="contact" className="border-t border-border bg-bg py-20 md:py-28">
       <div className="container-wide section-pad">
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-5">
             <p className="eyebrow">Start a project</p>
             <h2 className="display-lg mt-3 text-ink">Tell us about the space</h2>
             <p className="lead mt-4">
-              Share a few details and we will follow up with availability for an on-site
-              walkthrough. Most quotes land within two business days.
+              Share a few details and we’ll follow up with next steps for a walkthrough across{" "}
+              {brand.serviceArea}.
             </p>
-            <div className="mt-8 space-y-4 text-sm">
-              <div>
-                <p className="text-subtle">Call</p>
-                <a href={brand.phoneHref} className="font-medium text-ink hover:text-accent">
+            <div className="mt-8 space-y-4 text-sm text-ink-soft">
+              <p>
+                <span className="block text-xs font-medium uppercase tracking-[0.16em] text-muted">
+                  Call
+                </span>
+                <a href={brand.phoneHref} className="mt-1 inline-block text-base font-medium text-ink hover:text-accent">
                   {brand.phone}
                 </a>
-              </div>
-              <div>
-                <p className="text-subtle">Email</p>
-                <a href={brand.emailHref} className="font-medium text-ink hover:text-accent">
+              </p>
+              <p>
+                <span className="block text-xs font-medium uppercase tracking-[0.16em] text-muted">
+                  Email
+                </span>
+                <a href={brand.emailHref} className="mt-1 inline-block text-base font-medium text-ink hover:text-accent">
                   {brand.email}
                 </a>
-              </div>
-              <div>
-                <p className="text-subtle">Service area</p>
-                <p className="font-medium text-ink">{brand.serviceArea}</p>
-              </div>
+              </p>
+              <p>
+                <span className="block text-xs font-medium uppercase tracking-[0.16em] text-muted">
+                  Service area
+                </span>
+                <span className="mt-1 block text-base text-ink">{brand.location}</span>
+                <span className="block text-sm text-muted">{brand.serviceArea}</span>
+              </p>
             </div>
           </Reveal>
 
-          <Reveal delay={80} className="lg:col-span-7">
+          <Reveal delay={60} className="lg:col-span-7">
             <div className="rounded-[1.5rem] border border-border bg-surface-elevated p-6 shadow-[var(--shadow-soft)] sm:p-8">
-              {submitted ? (
-                <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
-                  <div className="flex size-12 items-center justify-center rounded-full bg-accent/10 text-accent">
-                    <CheckCircle2 className="size-6" />
-                  </div>
-                  <h3 className="mt-5 font-display text-2xl font-medium text-ink">
+              {sent ? (
+                <div className="flex min-h-[280px] flex-col items-start justify-center">
+                  <CheckCircle2 className="size-8 text-sage" />
+                  <h3 className="mt-4 font-display text-2xl font-medium text-ink">
                     Request received
                   </h3>
-                  <p className="mt-2 max-w-sm text-sm text-muted">
-                    Thank you. A project coordinator will reach out shortly to schedule your
-                    walkthrough.
+                  <p className="mt-2 max-w-md text-muted">
+                    Thanks — we’ll review your project details and follow up shortly.
                   </p>
                   <button
                     type="button"
                     className="mt-6 text-sm font-medium text-accent hover:text-accent-hover"
-                    onClick={() => setSubmitted(false)}
+                    onClick={() => setSent(false)}
                   >
                     Send another request
                   </button>
@@ -438,74 +442,74 @@ function Contact() {
               ) : (
                 <form className="grid gap-4 sm:grid-cols-2" onSubmit={onSubmit}>
                   <label className="block sm:col-span-1">
-                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
                       Name
                     </span>
                     <input
                       required
                       name="name"
-                      className="h-11 w-full rounded-xl border border-border bg-bg px-3.5 text-sm text-ink outline-none transition-shadow placeholder:text-subtle focus:border-border-strong focus:ring-2 focus:ring-accent/15"
+                      autoComplete="name"
+                      className="h-11 w-full rounded-xl border border-border bg-bg px-3 text-sm text-ink outline-none ring-accent/30 transition focus:ring-2"
                       placeholder="Your name"
                     />
                   </label>
                   <label className="block sm:col-span-1">
-                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
                       Email
                     </span>
                     <input
                       required
                       type="email"
                       name="email"
-                      className="h-11 w-full rounded-xl border border-border bg-bg px-3.5 text-sm text-ink outline-none transition-shadow placeholder:text-subtle focus:border-border-strong focus:ring-2 focus:ring-accent/15"
-                      placeholder="you@email.com"
+                      autoComplete="email"
+                      className="h-11 w-full rounded-xl border border-border bg-bg px-3 text-sm text-ink outline-none ring-accent/30 transition focus:ring-2"
+                      placeholder="you@example.com"
                     />
                   </label>
                   <label className="block sm:col-span-1">
-                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
                       Phone
                     </span>
                     <input
                       name="phone"
                       type="tel"
-                      className="h-11 w-full rounded-xl border border-border bg-bg px-3.5 text-sm text-ink outline-none transition-shadow placeholder:text-subtle focus:border-border-strong focus:ring-2 focus:ring-accent/15"
-                      placeholder="(704) 000-0000"
+                      autoComplete="tel"
+                      className="h-11 w-full rounded-xl border border-border bg-bg px-3 text-sm text-ink outline-none ring-accent/30 transition focus:ring-2"
+                      placeholder="(864) 000-0000"
                     />
                   </label>
                   <label className="block sm:col-span-1">
-                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
                       Project type
                     </span>
                     <select
                       name="type"
-                      className="h-11 w-full rounded-xl border border-border bg-bg px-3.5 text-sm text-ink outline-none transition-shadow focus:border-border-strong focus:ring-2 focus:ring-accent/15"
-                      defaultValue="Interior"
+                      className="h-11 w-full rounded-xl border border-border bg-bg px-3 text-sm text-ink outline-none ring-accent/30 transition focus:ring-2"
+                      defaultValue="interior"
                     >
-                      <option>Interior</option>
-                      <option>Exterior</option>
-                      <option>Cabinetry</option>
-                      <option>Commercial</option>
-                      <option>Color consultation</option>
+                      <option value="interior">Interior</option>
+                      <option value="exterior">Exterior</option>
+                      <option value="cabinetry">Cabinetry</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="consultation">Color consultation</option>
                     </select>
                   </label>
                   <label className="block sm:col-span-2">
-                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
                       Project details
                     </span>
                     <textarea
                       required
                       name="details"
                       rows={4}
-                      className="w-full resize-y rounded-xl border border-border bg-bg px-3.5 py-3 text-sm text-ink outline-none transition-shadow placeholder:text-subtle focus:border-border-strong focus:ring-2 focus:ring-accent/15"
-                      placeholder="Rooms, approximate size, timeline, or any notes about the space…"
+                      className="w-full resize-y rounded-xl border border-border bg-bg px-3 py-2.5 text-sm text-ink outline-none ring-accent/30 transition focus:ring-2"
+                      placeholder="Neighborhood, timeline, rooms or exterior scope…"
                     />
                   </label>
-                  <div className="sm:col-span-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-xs text-subtle">
-                      By submitting, you agree we may contact you about this project.
-                    </p>
+                  <div className="sm:col-span-2">
                     <button
                       type="submit"
-                      className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-7 text-sm font-medium text-accent-fg transition-colors hover:bg-accent-hover active:scale-[0.98]"
+                      className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-accent-fg transition-colors hover:bg-accent-hover sm:w-auto"
                     >
                       Request a quote
                       <ArrowRight className="size-4" />
@@ -521,7 +525,7 @@ function Contact() {
   );
 }
 
-export function PaintLineHome() {
+export function PaintlineHome() {
   return (
     <div className="min-h-dvh bg-bg text-ink">
       <SiteHeader />

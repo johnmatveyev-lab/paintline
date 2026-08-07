@@ -5,7 +5,7 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "PaintLine Pro";
 const APP_DESCRIPTION =
-  "Premium residential and commercial painting in Charlotte, NC. Architectural-grade finishes, color consultation, and craftsmanship that photographs under harsh light.";
+  "Premium residential and commercial painting company in Greenville, SC. Architectural-grade finishes, color consultation, and craftsmanship that photographs under harsh light.";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host
   ? `https://${host}/images/paintline/hero-living.jpg`
@@ -16,11 +16,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${APP_NAME} · Precision Painting Studio` },
+      { title: `${APP_NAME} · Greenville Painting Company` },
       { name: "description", content: APP_DESCRIPTION },
       { name: "apple-mobile-web-app-title", content: APP_NAME },
       { name: "theme-color", content: "#1A1917" },
-      { property: "og:title", content: `${APP_NAME} · Precision Painting Studio` },
+      { property: "og:title", content: `${APP_NAME} · Greenville Painting Company` },
       { property: "og:description", content: APP_DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

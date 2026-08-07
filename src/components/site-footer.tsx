@@ -27,7 +27,7 @@ export function SiteFooter() {
           </div>
 
           <div className="md:col-span-4">
-            <p className="eyebrow text-bg/45">Studio</p>
+            <p className="eyebrow text-bg/45">Company</p>
             <ul className="mt-4 space-y-2.5 text-sm text-bg/80">
               <li>{brand.location}</li>
               <li>

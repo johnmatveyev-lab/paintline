@@ -1,14 +1,21 @@
 # PaintLine Pro
 
-Premium painting-studio marketing site — warm paper & ink editorial brand for Charlotte craft finishes.
+Premium residential & commercial painting company website for Greenville, SC and the Upstate — warm paper & ink editorial brand.
 
 ## Live
 
 - **Production:** [paintline-woad.vercel.app](https://paintline-woad.vercel.app)
 - **Team alias:** [paintline-johnmatveyev-lab.vercel.app](https://paintline-johnmatveyev-lab.vercel.app)
-- **Also:** [paintline-pro.vercel.app](https://paintline-pro.vercel.app) (legacy project, same brand)
+- **Also:** [paintline-pro.vercel.app](https://paintline-pro.vercel.app)
 
 > Note: `paintline.vercel.app` is already registered to an unrelated third-party project (Paintline Chemical) and cannot be claimed.
+
+## Market
+
+- **Brand:** PaintLine Pro
+- **Type:** Painting company (residential & commercial)
+- **Location:** Greenville, South Carolina
+- **Service area:** Greenville, Spartanburg & the Upstate
 
 ## Stack
 
@@ -33,5 +40,5 @@ npm run typecheck
 | Kitchen | `project-kitchen.jpg` |
 | Suite | `project-bedroom.jpg` |
 | Commercial | `project-commercial.jpg` |
-| Studio / crew | `team-crew.jpg` |
+| Crew | `team-crew.jpg` |
 | Palette / craft | `color-palette.jpg`, `craft-detail.jpg` |

@@ -46,7 +46,7 @@ export function SiteHeader() {
               PaintLine
             </span>
             <span className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-muted">
-              Pro Studio
+              Painting Co.
             </span>
           </span>
         </a>
